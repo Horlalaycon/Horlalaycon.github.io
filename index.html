@@ -1,177 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Ibrahim Ajimati Profile</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-zR2Th/03XTt10b8ASg5x1xG63z80Y4qRbRV0VHnZS5Q3PtWDUNrNH9mE+bYgg0JbQ6MQr4U3zL8qSe6gU" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Terminal-Style Portfolio</title>
     <style>
-        /* Base styles */
         body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-            color: #333;
+            font-family: monospace;
+            background-color: #f0f0f0; /* Light mode background */
+            color: #333; /* Light mode text color */
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
 
-        * {
-            box-sizing: border-box;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-            background-color: #333;
-            color: #fff;
-        }
-
-        .profile-image {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .profile-image img {
-            border-radius: 50%;
-            max-width: 200px;
-            border: 2px solid #333;
-            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .about, .skills, .contact {
-            padding: 20px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: #007bff;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            background-color: #f0f0f0;
-        }
-
-        /* Responsive design */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 1.5em;  /* Adjust heading size for smaller screens */
-            }
-
-            .profile-image img {
-                max-width: 150px;  /* Adjust image size for smaller screens */
-            }
-
-            .about, .skills, .contact {
-                margin-bottom: 20px;  /* Add some spacing between sections */
-            }
-        }
-
-        /* Dark mode */
         .dark-mode {
             background-color: #222;
             color: #fff;
         }
 
-        .dark-mode header,
-        .dark-mode .about,
-        .dark-mode .skills,
-        .dark-mode .contact,
-        .dark-mode footer {
-            background-color: #333;
-        }
-
-        .dark-mode a {
-            color: #999;
-        }
-
-        .dark-mode .profile-image img {
-            border: 2px solid #fff;
-            box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
-        }
-
-        /* Robot-like design */
-        body {
-            font-family: monospace;
-        }
-
-        header, .about, .skills, .contact, footer {
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            padding: 10px;
-            margin: 10px;
-        }
-
-        /* Toggle button styling */
-        #toggle-theme {
+        .button {
             background-color: #333;
             color: #fff;
             border: none;
-            padding: 10px 20px;
+            padding: 5px 10px;
             cursor: pointer;
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
 
-        #toggle-theme:hover {
-            background-color: #555;
-        }
-
-        #toggle-theme i {
-            margin-right: 5px;
+        .dark-mode .button {
+            background-color: #fff;
+            color: #333;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1> Ibrahim Ajimati </h1>
-        <p>A Cyber Security Researcher</p>
-        <button id="toggle-theme"><i class="fa-solid fa-moon"></i> Toggle Theme</button>
-    </header>
+    <button class="button" onclick="toggleTheme()">Toggle Theme</button>
 
-    <section class="profile-image">
-        <img src="robot-profile-pic.png" alt="Robot Profile Picture">
-    </section>
+    <h1>Ibrahim Ajimati</h1>
+    <p>Cyber Security Researcher</p>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>I am a curious security researcher, here to explore and create.</p>
-    </section>
+    <p>A brief bio about yourself.</p>
 
-    <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Hacking</li>
-            <li>Python Programming</li>
-            <li>Computer networking</li>
-            <li>Problem Solving</li>
-        </ul>
-    </section>
+    <h2>Skills</h2>
+    <ul>
+        <li>Hacking</li>
+        <li>Python Programming</li>
+        <li>Computer Networking</li>
+        <li>Problem Solving</li>
+    </ul>
+
+    <h2>Projects</h2>
+    <ul>
+        <li>
+            <h3>Project 1</h3>
+            <p>Description of project 1.</p>
+            <a href="project1-link">Link to project 1</a>
+        </li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>
+        Email: you@example.com<br>
+        LinkedIn: your-linkedin-profile<br>
+        GitHub: your-github-profile
+    </p>
 
     <footer>
         <p>&copy; 2023 Ibrahim Ajimati</p>
     </footer>
 
     <script>
-        const toggleThemeButton = document.getElementById('toggle-theme');
-        const body = document.body;
-
-        toggleThemeButton.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-            if (body.classList.contains('dark-mode')) {
-                toggleThemeButton.textContent = 'Toggle Light Mode';
-                toggleThemeButton.querySelector('i').classList.remove('fa-moon');
-                toggleThemeButton.querySelector('i').classList.add('fa-sun');
-            } else {
-                toggleThemeButton.textContent = 'Toggle Dark Mode';
-                toggleThemeButton.querySelector('i').classList.remove('fa-sun');
-                toggleThemeButton.querySelector('i').classList.add('fa-moon');
-            }
-        });
+        function toggleTheme() {
+            let body = document.body;
+            body.classList.toggle("dark-mode");
+        }
     </script>
 </body>
     </html>
