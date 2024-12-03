@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<head>
+<html lang="en">  <head>
     <title>Ibrahim Ajimati Profile</title>
     <style>
+        /* Base styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -10,6 +10,9 @@
             background-color: #f0f0f0;
             color: #333;
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        * {  box-sizing: border-box;
         }
 
         header {
@@ -37,8 +40,7 @@
 
         ul {
             list-style-type: none;
-            padding-left: 20px;
-        }
+            padding: 0;  }
 
         a {
             text-decoration: none;
@@ -49,6 +51,21 @@
             text-align: center;
             padding: 10px;
             background-color: #f0f0f0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 1.5em;  /* Adjust heading size for smaller screens */
+            }
+
+            .profile-image img {
+                max-width: 150px;  /* Adjust image size for smaller screens */
+            }
+
+            .about, .skills, .contact {
+                margin-bottom: 20px;  /* Add some spacing between sections */
+            }
         }
 
         /* Dark mode */
@@ -89,7 +106,7 @@
 </head>
 <body>
     <header>
-        <h1>🤖 Ibrahim Ajimati 🤖</h1>
+        <h1> Ibrahim Ajimati </h1>
         <p>A Cyber Security Researcher</p>
         <button id="toggle-theme">Toggle Theme</button>
     </header>
@@ -109,29 +126,4 @@
             <li>Hacking</li>
             <li>Python Programming</li>
             <li>Computer networking</li>
-            <li>Problem Solving</li>
-        </ul>
-    </section>
-
-    <section class="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li>Email: robot@example.com</li>
-            <li>Website: robot.com</li>
-        </ul>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Ibrahim Ajimati Inc.</p>
-    </footer>
-
-    <script>
-        const toggleButton = document.getElementById('toggle-theme');
-        const body = document.body;
-
-        toggleButton.addEventListener('click', () => {
-            body.classList.toggle('dark-mode');
-        });
-    </script>
-</body>
-    </html>
+            <li>Problem Solving</li
