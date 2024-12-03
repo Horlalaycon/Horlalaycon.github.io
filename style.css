@@ -46,10 +46,14 @@ body {
     text-align: left;
     width: 100%;
     text-decoration: none;
-    
   }
 
-  
+#myNavbar ul {
+    list-style-type: none;
+    }
+#myNavbar a {
+    text-decoration: none;
+}
 .navbar-item:hover {
     background-color: #f1f1f1; /* Light mode hover color */
 }
