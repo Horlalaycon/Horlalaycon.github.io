@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">  <head>
+<html lang="en">
+<head>
     <title>Ibrahim Ajimati Profile</title>
     <style>
         /* Base styles */
@@ -12,7 +13,8 @@
             transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
 
-        * {  box-sizing: border-box;
+        * {
+            box-sizing: border-box;
         }
 
         header {
@@ -29,7 +31,8 @@
 
         .profile-image img {
             border-radius: 50%;
-            max-width: 200px;
+            max-width: 100%; /* Adjust image width to fit the container */
+            height: auto;
             border: 2px solid #333;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
@@ -40,7 +43,8 @@
 
         ul {
             list-style-type: none;
-            padding: 0;  }
+            padding: 0;
+        }
 
         a {
             text-decoration: none;
@@ -56,15 +60,26 @@
         /* Responsive design */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.5em;  /* Adjust heading size for smaller screens */
+                font-size: 1.5em;
             }
 
             .profile-image img {
-                max-width: 150px;  /* Adjust image size for smaller screens */
+                max-width: 100%;
+                height: auto;
             }
 
             .about, .skills, .contact {
-                margin-bottom: 20px;  /* Add some spacing between sections */
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2em;
+            }
+
+            .about, .skills, .contact {
+                padding: 10px;
             }
         }
 
@@ -108,7 +123,7 @@
     <header>
         <h1> Ibrahim Ajimati </h1>
         <p>A Cyber Security Researcher</p>
-        <button id="toggle-theme">Toggle Theme</button>
+        <button id="toggle-theme">Theme</button>
     </header>
 
     <section class="profile-image">
@@ -126,4 +141,29 @@
             <li>Hacking</li>
             <li>Python Programming</li>
             <li>Computer networking</li>
-            <li>Problem Solving</li
+            <li>Problem Solving</li>
+        </ul>
+    </section>
+
+    <section class="contact">
+        <h2>Contact</h2>
+        <ul>
+            <li>Email: robot@example.com</li>
+            <li>Website: robot.com</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Ibrahim Ajimati Inc.</p>
+    </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+    </html>
