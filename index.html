@@ -1,70 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ibrahim Ajimati's Profile</title>
-    <style>
-        /* Base styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            color: #333; /* Default text color for light mode */
-            background-color: #fff; /* Default background color for light mode */
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        header {
-            text-align: center;
-            padding: 20px;
-        }
-
-        .profile-image {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .profile-image img {
-            border-radius: 50%;
-            width: 200px;
-        }
-
-        .about, .skills, .contact {
-            padding: 20px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit; /* Inherit from body text color */
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-        }
-
-        /* Dark mode styles */
-        .dark-mode {
-            background-color: #333;
-            color: #fff;
-        }
-
-        .dark-mode header,
-        .dark-mode .about,
-        .dark-mode .skills,
-        .dark-mode .contact,
-        .dark-mode footer {
-            background-color: #222;
-        }
-
-        .dark-mode a {
-            color: #eee;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -73,45 +13,40 @@
         <button id="toggle-theme">Toggle Theme</button>
     </header>
 
-    <section class="profile-image">
-        <img src="profile-pic.jpg" alt="Profile Picture">
-    </section>
+    <main>
+        <section class="profile-image">
+            <img src="profile-pic.jpg" alt="Profile Picture">
+        </section>
 
-    <section class="about">
-        <h2>About Me</h2>
-        <p>My name is Ibrahim Ajimati, I am a cyber security researcher.</p>
-    </section>
+        <section class="about">
+            <h2>About Me</h2>
+            <p>My name is Ibrahim Ajimati, I am a cyber security researcher.</p>
+        </section>
 
-    <section class="skills">
-        <h2>Skills</h2>
-        <ul>
-            <li>Computer Engineering</li>
-            <li>Ethical Hacking</li>
-            <li>Python program development</li>
-            <li>Computer Networking</li>
-        </ul>
-    </section>
+        <section class="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>Computer Engineering</li>
+                <li>Ethical Hacking</li>
+                <li>Python program development</li>
+                <li>Computer Networking</li>
+            </ul>
+        </section>
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li><a href="mailto:your_email@example.com">Email</a></li>
-            <li><a href="https://www.linkedin.com/in/your_ibrahim_ajimati_profile">Replace with your LinkedIn URL</a></li>
-            <li><a href="https://github.com/your_github_username">GitHub</a></li>
-        </ul>
-    </section>
+        <section class="contact">
+            <h2>Contact</h2>
+            <ul>
+                <li><a href="mailto:your_email@example.com">Email</a></li>
+                <li><a href="https://www.linkedin.com/in/your_linkedin_profile">LinkedIn</a></li>
+                <li><a href="https://github.com/Horlalaycon">GitHub</a></li>
+            </ul>
+        </section>
+    </main>
 
     <footer>
         <p>&copy; 2023 Ibrahim Ajimati</p>
     </footer>
 
-    <script>
-        const toggleButton = document.getElementById('toggle-theme');
-        const body = document.body;
-
-        toggleButton.addEventListener('click', () => {
-            body.classList.toggle('dark-mode'); 1 
-        });
-    </script>
+    <script src="script.js"></script>
 </body>
-        </html>
+                        </html>
