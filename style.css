@@ -1,0 +1,70 @@
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #333;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+header {
+    text-align: center;
+    padding: 20px;
+}
+
+.profile-image {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    max-width: 200px;
+}
+
+.about, .skills, .contact {
+    padding: 20px;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+
+/* Dark mode */
+.dark-mode {
+    background-color: #222;
+    color: #fff;
+}
+
+.dark-mode header,
+.dark-mode .about,
+.dark-mode .skills,
+.dark-mode .contact,
+.dark-mode footer {
+    background-color: #333;
+}
+
+.dark-mode a {
+    color: #999;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .profile-image img {
+        max-width: 150px;
+    }
+      }
