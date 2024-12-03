@@ -1,52 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim Ajimati's Profile</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Ibrahim Ajimati Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .profile-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .profile-image img {
+            border-radius: 50%;
+            max-width: 200px;
+            border: 2px solid #333;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .about, .skills, .contact {
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding-left: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #f0f0f0;
+        }
+
+        /* Dark mode */
+        .dark-mode {
+            background-color: #222;
+            color: #fff;
+        }
+
+        .dark-mode header,
+        .dark-mode .about,
+        .dark-mode .skills,
+        .dark-mode .contact,
+        .dark-mode footer {
+            background-color: #333;
+        }
+
+        .dark-mode a {
+            color: #999;
+        }
+
+        .dark-mode .profile-image img {
+            border: 2px solid #fff;
+            box-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Robot-like design */
+        body {
+            font-family: monospace;
+        }
+
+        header, .about, .skills, .contact, footer {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Ibrahim Ajimati</h1>
-        <p>Cyber Security Researcher</p>
+        <h1>🤖 Ibrahim Ajimati 🤖</h1>
+        <p>A Cyber Security Researcher</p>
         <button id="toggle-theme">Toggle Theme</button>
     </header>
 
-    <main>
-        <section class="profile-image">
-            <img src="profile-pic.jpg" alt="Profile Picture">
-        </section>
+    <section class="profile-image">
+        <img src="robot-profile-pic.png" alt="Robot Profile Picture">
+    </section>
 
-        <section class="about">
-            <h2>About Me</h2>
-            <p>My name is Ibrahim Ajimati, I am a cyber security researcher.</p>
-        </section>
+    <section class="about">
+        <h2>About Me</h2>
+        <p>I am a curious security researcher, here to explore and create.</p>
+    </section>
 
-        <section class="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Computer Engineering</li>
-                <li>Ethical Hacking</li>
-                <li>Python program development</li>
-                <li>Computer Networking</li>
-            </ul>
-        </section>
+    <section class="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Hacking</li>
+            <li>Python Programming</li>
+            <li>Computer networking</li>
+            <li>Problem Solving</li>
+        </ul>
+    </section>
 
-        <section class="contact">
-            <h2>Contact</h2>
-            <ul>
-                <li><a href="mailto:your_email@example.com">Email</a></li>
-                <li><a href="https://www.linkedin.com/in/your_linkedin_profile">LinkedIn</a></li>
-                <li><a href="https://github.com/Horlalaycon">GitHub</a></li>
-            </ul>
-        </section>
-    </main>
+    <section class="contact">
+        <h2>Contact</h2>
+        <ul>
+            <li>Email: robot@example.com</li>
+            <li>Website: robot.com</li>
+        </ul>
+    </section>
 
     <footer>
-        <p>&copy; 2023 Ibrahim Ajimati</p>
+        <p>&copy; 2023 Ibrahim Ajimati Inc.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+        });
+    </script>
 </body>
-                </html>
+    </html>
