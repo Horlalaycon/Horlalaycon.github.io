@@ -3,16 +3,19 @@
 <head>
     <title>Ibrahim Ajimati's Profile</title>
     <style>
+        /* Base styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            color: #333; /* Default text color for light mode */
+            background-color: #fff; /* Default background color for light mode */
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
         }
 
         header {
             text-align: center;
             padding: 20px;
-            background-color: #f2f2f2;
         }
 
         .profile-image {
@@ -36,20 +39,38 @@
 
         a {
             text-decoration: none;
-            color: #007bff;
+            color: inherit; /* Inherit from body text color */
         }
 
         footer {
             text-align: center;
             padding: 10px;
-            background-color: #f2f2f2;
+        }
+
+        /* Dark mode styles */
+        .dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        .dark-mode header,
+        .dark-mode .about,
+        .dark-mode .skills,
+        .dark-mode .contact,
+        .dark-mode footer {
+            background-color: #222;
+        }
+
+        .dark-mode a {
+            color: #eee;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>My Name</h1>
-        <p>My Job</p>
+        <h1>Ibrahim Ajimati</h1>
+        <p>Cyber Security Researcher</p>
+        <button id="toggle-theme">Toggle Theme</button>
     </header>
 
     <section class="profile-image">
@@ -58,7 +79,7 @@
 
     <section class="about">
         <h2>About Me</h2>
-        <p>My name is Ibrahim ajimati, i am a cyber security researcher.</p>
+        <p>My name is Ibrahim Ajimati, I am a cyber security researcher.</p>
     </section>
 
     <section class="skills">
@@ -75,14 +96,22 @@
         <h2>Contact</h2>
         <ul>
             <li><a href="mailto:your_email@example.com">Email</a></li>
-            <li><a href="https://www.linkedin.com/in/your_linkedin_profile">LinkedIn</a></li>
+            <li><a href="https://www.linkedin.com/in/your_ibrahim_ajimati_profile">Replace with your LinkedIn URL</a></li>
             <li><a href="https://github.com/your_github_username">GitHub</a></li>
         </ul>
     </section>
 
     <footer>
-        <p
-            >&copy; 2023 Ibrahim Ajimati</p>
+        <p>&copy; 2023 Ibrahim Ajimati</p>
     </footer>
+
+    <script>
+        const toggleButton = document.getElementById('toggle-theme');
+        const body = document.body;
+
+        toggleButton.addEventListener('click', () => {
+            body.classList.toggle('dark-mode'); 1 
+        });
+    </script>
 </body>
-  </html>
+        </html>
