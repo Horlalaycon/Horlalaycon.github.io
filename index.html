@@ -4,36 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Terminal-Style Portfolio</title>
-    <style>
-        body {
-            font-family: monospace;
-            background-color: #f0f0f0; /* Light mode background */
-            color: #333; /* Light mode text color */
-            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-        }
-
-        .dark-mode {
-            background-color: #222;
-            color: #fff;
-        }
-
-        .button {
-            background-color: #333;
-            color: #fff;
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-        }
-
-        .dark-mode .button {
-            background-color: #fff;
-            color: #333;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button class="button" onclick="toggleTheme()">Toggle Theme</button>
-
+    
+    <nav id="myNavbar">
+        <button class="button" onclick="toggleTheme()">Toggle Theme</button>
+        <button class="button" onclick="toggleNavbar()">Show/Hide Menu</button>
+        <ul id="navbarList" style="display: none;">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    
     <h1>Ibrahim Ajimati</h1>
     <p>Cyber Security Researcher</p>
 
@@ -67,11 +51,6 @@
         <p>&copy; 2023 Ibrahim Ajimati</p>
     </footer>
 
-    <script>
-        function toggleTheme() {
-            let body = document.body;
-            body.classList.toggle("dark-mode");
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
     </html>
