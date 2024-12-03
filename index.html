@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <title>Ibrahim Ajimati Profile</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-zR2Th/03XTt10b8ASg5x1xG63z80Y4qRbRV0VHnZS5Q3PtWDUNrNH9mE+bYgg0JbQ6MQr4U3zL8qSe6gU" crossorigin="anonymous">
     <style>
         /* Base styles */
         body {
@@ -31,8 +32,7 @@
 
         .profile-image img {
             border-radius: 50%;
-            max-width: 100%; /* Adjust image width to fit the container */
-            height: auto;
+            max-width: 200px;
             border: 2px solid #333;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
         }
@@ -60,26 +60,15 @@
         /* Responsive design */
         @media (max-width: 768px) {
             header h1 {
-                font-size: 1.5em;
+                font-size: 1.5em;  /* Adjust heading size for smaller screens */
             }
 
             .profile-image img {
-                max-width: 100%;
-                height: auto;
+                max-width: 150px;  /* Adjust image size for smaller screens */
             }
 
             .about, .skills, .contact {
-                margin-bottom: 20px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            header h1 {
-                font-size: 1.2em;
-            }
-
-            .about, .skills, .contact {
-                padding: 10px;
+                margin-bottom: 20px;  /* Add some spacing between sections */
             }
         }
 
@@ -117,13 +106,31 @@
             padding: 10px;
             margin: 10px;
         }
+
+        /* Toggle button styling */
+        #toggle-theme {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+        }
+
+        #toggle-theme:hover {
+            background-color: #555;
+        }
+
+        #toggle-theme i {
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
     <header>
         <h1> Ibrahim Ajimati </h1>
         <p>A Cyber Security Researcher</p>
-        <button id="toggle-theme">Theme</button>
+        <button id="toggle-theme"><i class="fa-solid fa-moon"></i> Toggle Theme</button>
     </header>
 
     <section class="profile-image">
@@ -145,24 +152,25 @@
         </ul>
     </section>
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <ul>
-            <li>Email: robot@example.com</li>
-            <li>Website: robot.com</li>
-        </ul>
-    </section>
-
     <footer>
-        <p>&copy; 2023 Ibrahim Ajimati Inc.</p>
+        <p>&copy; 2023 Ibrahim Ajimati</p>
     </footer>
 
     <script>
-        const toggleButton = document.getElementById('toggle-theme');
+        const toggleThemeButton = document.getElementById('toggle-theme');
         const body = document.body;
 
-        toggleButton.addEventListener('click', () => {
+        toggleThemeButton.addEventListener('click', () => {
             body.classList.toggle('dark-mode');
+            if (body.classList.contains('dark-mode')) {
+                toggleThemeButton.textContent = 'Toggle Light Mode';
+                toggleThemeButton.querySelector('i').classList.remove('fa-moon');
+                toggleThemeButton.querySelector('i').classList.add('fa-sun');
+            } else {
+                toggleThemeButton.textContent = 'Toggle Dark Mode';
+                toggleThemeButton.querySelector('i').classList.remove('fa-sun');
+                toggleThemeButton.querySelector('i').classList.add('fa-moon');
+            }
         });
     </script>
 </body>
