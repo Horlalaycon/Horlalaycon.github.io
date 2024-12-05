@@ -1,56 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Terminal-Style Portfolio</title>
+    <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <nav id="myNavbar">
-        <button class="button" onclick="toggleTheme()">Toggle Theme</button>
-        <button class="button" onclick="toggleNavbar()">Show/Hide Menu</button>
-        <ul id="navbarList" style="display: none;">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Contact</a></li>
+    <div class="menu-bar">
+        <button id="menuButton">Menu</button>
+        <div class="toggle-container">
+            <label class="switch">
+                <input type="checkbox" id="darkModeToggle">
+                <span class="slider round"></span>
+            </label>
+        </div>
+    </div>
+
+    <div id="menuDropdown" style="display: none;">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Resume</a></li>
+            <li><a href="#">Projects</a></li>
         </ul>
-      </nav>
-    
-    <h1>Ibrahim Ajimati</h1>
-    <p>Cyber Security Researcher</p>
+    </div>
 
-    <p>A brief bio about yourself.</p>
+    <div class="content">
+        <div class="terminal">
+            
+            <div class="prompt">user@localhost:~$ </div>
+            <div class="output">
+                <p>Whoami</p>
+                <p>Name: Ibrahim Ajimati<br>Alias:Sys_br3ach3r<br>Occupation: Cyber Security Researcher<br>About: I am just a dude, who love tinkering</p>
+            </div>
+            
+            <div class="prompt">user@localhost:~$ </div>
+            <div class="output">
+                <h2>Skills</h2>
+                    <ul>
+                        <li>Hacking</li>
+                        <li>Python Programming</li>
+                        <li>Computer Networking</li>
+                    </ul>
+            </div>
 
-    <h2>Skills</h2>
-    <ul>
-        <li>Hacking</li>
-        <li>Python Programming</li>
-        <li>Computer Networking</li>
-        <li>Problem Solving</li>
-    </ul>
+            <div class="prompt">user@localhost:~$ </div>
+            <div class="output">
+                <h2>Projects</h2>
+                <ul>
+                    <li>
+                        <h3>Net probe</h3>
+                        <p>net probe is a software tool that helps you understand your network. It can tell you what devices are connected to your network, what services they are running, and where they are located.
+                        </p>
+                        <a href="project1-link" class="follow-link">Link to project 1</a>
+                    </li>
+                </ul>
+            </div>
 
-    <h2>Projects</h2>
-    <ul>
-        <li>
-            <h3>Project 1</h3>
-            <p>Description of project 1.</p>
-            <a href="project1-link">Link to project 1</a>
-        </li>
-    </ul>
+            <div class="prompt">user@localhost:~$ </div>
+            <div class="output">                
+                <h2>Contact</h2>
+                    <p>
+                        Instagram: <a href="https://www.instagram.com/sys_br3ach3r/" class="follow-link">sys_br3ach3r</a><br>
+                        GitHub: <a href="https://github.com/Horlalaycon" class="follow-link">Horlalaycon</a>
+                         
+                         
+                    </p>
+            </div>
 
-    <h2>Contact</h2>
-    <p>
-        Email: you@example.com<br>
-        LinkedIn: your-linkedin-profile<br>
-        GitHub: your-github-profile
-    </p>
 
-    <footer>
-        <p>&copy; 2023 Ibrahim Ajimati</p>
-    </footer>
+
+
+
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
-    </html>
+</html>

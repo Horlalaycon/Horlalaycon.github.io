@@ -1,13 +1,14 @@
-function toggleTheme() {
-    let body = document.body;
-    body.classList.toggle("dark-mode");
-}
+const menuButton = document.getElementById('menuButton');
+const menuDropdown = document.getElementById('menuDropdown');
+const darkModeToggle = document.getElementById('darkModeToggle');
 
-function toggleNavbar() {
-    var navbarList = document.getElementById("navbarList");
-    if (navbarList.style.display === "none") {
-      navbarList.style.display = "block";
-    } else {
-      navbarList.style.display = "none";
-    }
-  }
+menuButton.addEventListener('click', () => {
+    menuDropdown.style.display = menuDropdown.style.display === 'none' ? 'block' : 'none';
+});
+
+darkModeToggle.addEventListener('change', () => {
+    document.body.classList.toggle('dark-mode');
+    document.querySelector('.menu-bar').classList.toggle('dark-mode');
+    menuDropdown.classList.toggle('dark-mode');
+    document.querySelector('.terminal').classList.toggle('dark-mode');
+});

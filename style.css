@@ -1,74 +1,196 @@
 body {
-    font-family: monospace;
-    font-size: large;
-    background-color: #f0f0f0; /* Light mode background */
-    color: #333; /* Light mode text color */
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+    background-color: #fff; /* Default background color */
+    color: #000; /* Default text color */
 }
 
-.dark-mode {
-    background-color: #222;
-    color: #fff;
+.menu-bar {
+    background-color: #f2f2f2;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.button {
-    background-color: #333;
-    color: #fff;
+#menuButton {
+    background-color: #f2f2f2;
     border: none;
-    padding: 5px 10px;
+    color: black;
+    padding: 14px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
     cursor: pointer;
 }
 
-.dark-mode .button {
-    background-color: #fff;
-    color: #333;
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
 }
 
-#navbarList {
+nav li {
+    float: left;
+}
+
+nav li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    background-color: #ddd;
+}
+
+#menuDropdown {
+    display: none;
     position: absolute;
-    background-color: #f9f9f9; /* Light mode list background */
-    border: 1px solid #ddd;
+    background-color: #f9f9f9;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    display: none;
-    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
-.navbar-item {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
-    border-bottom: none;
-    color: #333;
-    padding: 12px 16px;
-    text-align: left;
-    width: 100%;
-    text-decoration: none;
-  }
-
-#myNavbar ul {
+#menuDropdown ul {
     list-style-type: none;
-    }
-#myNavbar a {
+    margin: 0;
+    padding: 0;
+}
+
+#menuDropdown li {
+    padding: 12px 16px;
     text-decoration: none;
-}
-.navbar-item:hover {
-    background-color: #f1f1f1; /* Light mode hover color */
-}
-
-.dark-mode .navbar-item {
-    color: #fff; /* Dark mode text color */
+    display: block;
+    text-align: left;
 }
 
-.dark-mode #navbarList {
-    background-color: #222; /* Dark mode list background */
+#menuDropdown li a {
+    text-decoration: none;
+    color: black;
+    display: block;
+    padding: 12px 16px;
 }
 
-.dark-mode .navbar-item:hover {
-    background-color: #333; /* Dark mode hover color */
+#menuDropdown li a:hover {
+    background-color: #f1f1f1;
 }
 
+.content {
+    padding: 20px;
+}
 
+.terminal {
+    background-color: #222; /* Default terminal background color */
+    color: #fff; /* Default terminal text color */
+    padding: 20px;
+    border: 1px solid #555;
+    border-radius: 5px;
+}
 
+.prompt {
+    color: #00ff00; /* Green color for prompt */
+}
+
+.output {
+    margin-top: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #222; /* Dark background for dark mode */
+    color: #fff; /* Light text for dark mode */
+}
+
+.menu-bar.dark-mode {
+    background-color: #333;
+}
+
+#menuButton.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+
+#menuButton.dark-mode:hover {
+    background-color: #444;
+}
+
+#menuDropdown.dark-mode {
+    background-color: #333;
+}
+
+#menuDropdown.dark-mode li a {
+    color: #fff;
+}
+
+#menuDropdown.dark-mode li a:hover {
+    background-color: #444;
+}
+
+.terminal.dark-mode {
+    background-color: #333; /* Darker terminal background for dark mode */
+    color: #fff; /* Light terminal text for dark mode */
+}
+
+.toggle-container {
+    margin-left: 20px; /* Add a gap between the button and the toggle */
+}
+
+.follow-link{
+    color: #ddd;
+}
