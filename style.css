@@ -104,12 +104,10 @@ nav li a:hover {
 
 .prompt {
     color: #00ff00; /* Green color for prompt */
-    font-size: larger;
 }
 
 .output {
     margin-top: 10px;
-    font-size: large;
 }
 
 .switch {
