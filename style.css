@@ -23,9 +23,14 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: xx-large;
     cursor: pointer;
 }
+
+#menuButton svg {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    fill: currentColor; /* Inherit color from parent */
+    }
 
 nav ul {
     list-style-type: none;
@@ -99,10 +104,12 @@ nav li a:hover {
 
 .prompt {
     color: #00ff00; /* Green color for prompt */
+    font-size: larger;
 }
 
 .output {
     margin-top: 10px;
+    font-size: large;
 }
 
 .switch {
@@ -195,3 +202,9 @@ body.dark-mode {
 .follow-link{
     color: #ddd;
 }
+.terminal-image {
+    width: 100%; /* Ensure the image width fits the container */
+    max-height: 300px; /* Limit the height to 350px */
+    object-fit: fill; /* Crop the image to fill the container */
+  }
+
