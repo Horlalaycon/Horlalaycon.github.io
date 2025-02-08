@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blogs</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <div class="menu-bar">
+        <button id="menuButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
+
+        <div class="theme-button-container">
+            <button id="themeButton">☀️</button>
+        </div>
+    </div>
+
+    <div id="menuDropdown" style="display: none;">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="roadmap.html">Roadmap</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="blogs.html">Blogs & Write-ups</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="terminal">
+            <center><h1>Sys_Br3ach3r's Blogs</h1>
+                <img src="images/3Tku.gif" alt="" class="terminal-image">
+            </center>
+           
+
+            <div class="prompt">user@Blog:~$ </div>
+            <div class="output">
+                <i><h3>Blogs</h3></i>
+                <ul>
+                    <li><a href="https://medium.com/@sys_br3ach3r/bug-bounty-hunting-101-7d2258a3b21d" class="follow-link">bug-bounty-hunting-101</a></li>
+
+                    <li><a href="https://medium.com/@sys_br3ach3r/python-power-create-your-own-network-port-scanner-bb3210e94b05" class="follow-link">Python Power: Create Your Own Network Port Scanner</a></li>
+                </ul>
+            </div>
+
+            <div class="prompt">user@write-ups:~$ </div>
+            <div class="output">
+                <i><h3>Write-ups</h3></i>
+                <ul>
+                    <li><a href="https://medium.com/@sys_br3ach3r/hacking-hub-msgbox-write-up-209ebbbebec5" class="follow-link">hacking-hub-messagebox-write-up</a></li>
+                    <!-- <p>Tryhackme</p> -->
+                </ul>
+            </div>
+    </div>
+    
+    <script src="script.js"></script>
+    <script>
+        // Check if the user has already chosen a mode
+        const mode = localStorage.getItem('mode');
+      
+        // If the user has chosen a mode, set it
+        if (mode) {
+          document.body.classList.add(mode);
+          document.querySelector('.menu-bar').classList.add(mode);
+          menuDropdown.classList.add(mode);
+          document.querySelector('.terminal').classList.add(mode);
+        }
+      </script>
+</body>
+</html>
