@@ -169,3 +169,20 @@ body.dark-mode {
     justify-content: flex-end; /* Align the button to the right */
     padding-right: 10px; /* Add some padding to the right */
   }
+
+ul.arrow-list {
+    list-style-type: none; /* Get rid of the default bullet */
+    padding-left: 1.5em; /* Add some space for the arrows */
+}
+
+ul.arrow-list li:before {
+    content: "=>"; /* The '>>' symbol and a space */
+    display: inline-block; /* Make it behave like text */
+    width: 1.5em; /* Make sure it takes up some space */
+    color: #00ff00; /* Green color for prompt */
+    /* margin-left: -1.5em; Pull it back into the left margin */
+}
+
+.text-tab{
+    margin-left: 2em;
+}
