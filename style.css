@@ -155,6 +155,7 @@ nav li a:hover {
     color: #00ff00; /* Bright green for titles in light mode, stands out on dark grey */
     margin-top: 0;
     margin-bottom: 10px;
+    font-size: larger;
 }
 
 .content-item p {
@@ -175,6 +176,7 @@ nav li a:hover {
 
 .item-text-container {
     flex: 1;
+    font-size: x-large;
 }
 
 /* Dark mode styles */
