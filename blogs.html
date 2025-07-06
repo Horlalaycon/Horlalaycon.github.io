@@ -5,10 +5,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
- 
     <div class="menu-bar">
         <button id="menuButton"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></button>
-
+        
         <div class="theme-button-container">
             <button id="themeButton">☀️</button>
         </div>
@@ -26,48 +25,50 @@
 
     <div class="content">
         <div class="terminal">
-            <center><h1>Sys_Br3ach3r's Write-ups & Blogs</h1>
+            <center>
+                <h1>Sys_Br3ach3r's Write-ups & Blogs</h1>
                 <img src="images/3Tku.gif" alt="" class="terminal-image">
             </center>
 
-            <div class="prompt">user@write-ups:~$ </div>
-            <div class="output">
-                <i><h3>Write-ups</h3></i>
-                <ul class="arrow-list">
-                    <li><a href="https://medium.com/@sys_br3ach3r/hacking-hub-msgbox-write-up-209ebbbebec5" target="_blank" class="follow-link">hacking-hub-messagebox-write-up</a></li>
-                    
-                    <!-- Tryhackme -->
-                    <li><a href="https://medium.com/@sys_br3ach3r/rootme-ctf-walkthrough-tryhackme-63a831ddbfd6" target="_blank" class="follow-link">Rootme CTF Walkthrough (Tryhackme)</a></li>
+            <div class="content-list">
+                <div class="content-item">
+                    <div class="output">
+                        <h3><span class="prompt">br3ach3r@reports:~# </span>Write-ups</h3>
+                        <div class="item-content-wrapper">
+                            <div class="item-text-container">
+                                <ul class="arrow-list">
+                                    <li><a href="https://medium.com/@sys_br3ach3r/hacking-hub-msgbox-write-up-209ebbbebec5" target="_blank" class="follow-link">hacking-hub-messagebox-write-up</a></li>
+                                    
+                                    <!-- Tryhackme -->
+                                    <li><a href="https://medium.com/@sys_br3ach3r/rootme-ctf-walkthrough-tryhackme-63a831ddbfd6" target="_blank" class="follow-link">Rootme CTF Walkthrough (Tryhackme)</a></li>
 
-                </ul>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="prompt">user@Blog:~$ </div>
-            <div class="output">
-                <i><h3>Blogs</h3></i>
-                <ul class="arrow-list">
-                    <li><a href="https://medium.com/@sys_br3ach3r/bug-bounty-hunting-101-7d2258a3b21d" target="_blank" class="follow-link">bug-bounty-hunting-101</a></li>
+            <div class="content-list">
+                <div class="content-item">
+                    <div class="output">
+                        <h3><span class="prompt">br3ach3r@reports:~# </span>Blogs</h3>
+                        <div class="item-content-wrapper">
+                            <div class="item-text-container">
+                                <ul class="arrow-list">
+                                    <li><a href="https://medium.com/@sys_br3ach3r/bug-bounty-hunting-101-7d2258a3b21d" target="_blank" class="follow-link">bug-bounty-hunting-101</a></li>
 
-                    <li><a href="https://medium.com/@sys_br3ach3r/python-power-create-your-own-network-port-scanner-bb3210e94b05" target="_blank" class="follow-link">Python Power: Create Your Own Network Port Scanner</a></li>
-
-                </ul>
+                                    <li><a href="https://medium.com/@sys_br3ach3r/python-power-create-your-own-network-port-scanner-bb3210e94b05" target="_blank" class="follow-link">Python Power: Create Your Own Network Port Scanner</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            
+        </div>
     </div>
-    
+        
     <script src="script.js"></script>
-    <script>
-        // Check if the user has already chosen a mode
-        const mode = localStorage.getItem('mode');
-      
-        // If the user has chosen a mode, set it
-        if (mode) {
-          document.body.classList.add(mode);
-          document.querySelector('.menu-bar').classList.add(mode);
-          menuDropdown.classList.add(mode);
-          document.querySelector('.terminal').classList.add(mode);
-        }
-      </script>
 </body>
 </html>

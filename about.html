@@ -16,7 +16,7 @@
     <div id="menuDropdown" style="display: none;">
         <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="about.html">About</a></li>
             <li><a href="roadmap.html">Roadmap</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="blogs.html">Blogs & Write-ups</a></li>
@@ -25,74 +25,68 @@
 
     <div class="content">
         <div class="terminal">
-            <center><h1>Who am i?</h1>
+            <center>
+                <h1>Who am i?</h1>
                 <img src="images/EgVM.gif" alt="" class="terminal-image">
             </center>
-           
 
-            <div class="prompt">root💻@br3ach3r:~$ </div>
-            <div class="output">
-                <i><p>Whoami</p></i>
+            <div class="content-list">
+                <div class="content-item">
+                    <div class="output">
+                        <h3><span class="prompt">br3ach3r@about:~# </span>Whoami</h3>
+                        <div class="item-content-wrapper">
+                            <div class="item-text-container">
+                                <ul class="arrow-list">
+                                    <li>Name: Ibrahim Ajimati</li>
+                                    <li>Alias: Sys_br3ach3r</li>
+                                    <li>Interest: Hacking, Security Tools development, CTF competition</li>
+                                    <li>Fun Fact: Security is an illusion</li>
+                                    <li>About: I'm a tinkerer with a curious mind, always looking for new and innovative ways to push the boundaries of what's possible with technology.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                <ul class="arrow-list">
-                    <li>Name: Ibrahim Ajimati</li>
-                    <li>Alias: Sys_br3ach3r</li>
-                    <li>Interest: Hacking, Security Tools development, CTF competition</li>
-                    <li>Fun Fact: Security is an illusion</li>
-                    <li>About: I'm a tinkerer with a curious mind, always looking for new and innovative ways to push the boundaries of what's possible with technology.</li>
-                </ul>
+                <div class="content-item">
+                    <div class="output">
+                        <h3><span class="prompt">br3ach3r@about:~# </span>Skills</h3>
+                        <div class="item-content-wrapper">
+                            <div class="item-text-container">
+                                <ul class="arrow-list">
+                                    <li>Problem solving</li>
+                                    <li>Programming Languages (Python, Bash)</li>
+                                    <li>Network engineering</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="content-item">
+                    <div class="output">
+                        <h3><span class="prompt">br3ach3r@about:~# </span>Contact</h3>
+                        <div class="item-content-wrapper">
+                            <div class="item-text-container">
+                                <ul class="arrow-list">
+                                    <li><a href="https://www.instagram.com/sys_br3ach3r/" target="_blank" class="follow-link" title="Instagram">Instagram </a></li>
+
+                                    <li><a href="https://github.com/Horlalaycon" target="_blank" class="follow-link" title="Github">Github</a></li>
+
+                                    <li><a href="https://x.com/f3ar_unkn0wn" target="_blank" class="follow-link" title="Twitter">Twitter</a></li>
+
+                                    <li><a href="https://www.linkedin.com/in/ibrahim-ajimati-8394b9349" target="_blank" class="follow-link" title="Linkedin">Linkedin</a></li>
+
+                                    <li><a href="https://medium.com/@sys_br3ach3r" class="follow-link" title="Medium">medium</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <div class="prompt">br3ach3r💻@skills:~$ </div>
-            <div class="output">
-                <i><p>Skills</p></i>
-                    <ul class="arrow-list">
-                        <li>Problem solving</li>
-                        <li>Programming Languages (Python, Bash)</li>
-                        <li>Network engineering</li>
-                    </ul>
-            </div>
-            
-            <div class="prompt">contact@Information:~$ </div>
-            <div class="output">
-                <i><p>Contact --info</p></i>
-                    <ul class="arrow-list">
-                        <li><a href="https://www.instagram.com/sys_br3ach3r/" target="_blank" class="follow-link" title="Instagram">Instagram </a></li>
-
-                        <li><a href="https://github.com/Horlalaycon" target="_blank" class="follow-link" title="Github">Github</a></li>
-
-                        <li><a href="https://x.com/f3ar_unkn0wn" target="_blank" class="follow-link" title="Twitter">Twitter</a></li>
-
-                        <li><a href="https://www.linkedin.com/in/ibrahim-ajimati-8394b9349" target="_blank" class="follow-link" title="Linkedin">Linkedin</a></li>
-
-                        <li><a href="https://medium.com/@sys_br3ach3r" class="follow-link" title="Medium">medium</a></li>
-                    </ul>
-                    
-
-                    
-
-                    
-
-                    
-
-                    
-
-            </div>
-            </div>
+        </div>
     </div>
-    
+        
     <script src="script.js"></script>
-    <script>
-        // Check if the user has already chosen a mode
-        const mode = localStorage.getItem('mode');
-      
-        // If the user has chosen a mode, set it
-        if (mode) {
-          document.body.classList.add(mode);
-          document.querySelector('.menu-bar').classList.add(mode);
-          menuDropdown.classList.add(mode);
-          document.querySelector('.terminal').classList.add(mode);
-        }
-      </script>
 </body>
 </html>
